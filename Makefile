@@ -708,6 +708,9 @@ KBUILD_CFLAGS += $(CLANG_TARGET) $(CLANG_GCC_TC)
 KBUILD_AFLAGS += $(CLANG_TARGET) $(CLANG_GCC_TC)
 KBUILD_CFLAGS += $(call cc-option, -no-integrated-as)
 KBUILD_AFLAGS += $(call cc-option, -no-integrated-as)
+CLANG_FLAGS    += -fno-builtin-bcmp
+KBUILD_CFLAGS  += $(CLANG_FLAGS)
+KBUILD_AFLAGS  += $(CLANG_FLAGS)
 endif
 
 KBUILD_CFLAGS	+= $(call cc-option,-fno-PIE)
